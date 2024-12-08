@@ -20,5 +20,9 @@ int main(int argc, char *argv[]) {
   printf("Substitute string: %s\n", cmd.substitute_string);
   printf("Scope: %c\n", cmd.scope);
 
+  free(cmd.initial_string);
+  free(cmd.substitute_string);
+
+  fclose(txt_file);
   return 0;
 }
